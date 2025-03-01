@@ -1,0 +1,21 @@
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  
+  50% {
+    background-position: 100% 50%;
+  }
+  
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  color: #1e3a8a;
+}
+
+#sidebar {
+    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+}
