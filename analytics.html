@@ -8,17 +8,16 @@
     <!-- Include Chart.js for charts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 p-8">
     <!-- Dashboard Container -->
     <div class="container mx-auto p-4">
         <!-- Dashboard Header -->
-        <header class="bg-white p-6 rounded-lg shadow mb-6">
-            <h1 class="text-2xl font-bold text-gray-800">Analytics Dashboard</h1>
-            <p class="text-gray-600">Welcome to the student analytics dashboard.</p>
+        <header class="bg-white p-6 rounded-lg shadow mb-6 text-center">
+            <h1 class="text-5xl font-bold text-gray-800">Analytics Dashboard</h1>
         </header>
 
         <!-- Dashboard Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             <!-- Student Card -->
             <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
                 <div class="flex items-center">
@@ -33,6 +32,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- Grade Card -->
             <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
                 <div class="flex items-center">
@@ -64,16 +64,127 @@
             </div>
 
             <!-- Average Score Card -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+                <div class="flex items-center justify-between">
+                    <!-- Icon and Title -->
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 p-3 rounded-full">
+                            <svg class="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-sm text-gray-500">Average Score</p>
+                            <p class="text-2xl font-bold text-gray-800">82.5</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Progress Bar -->
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                    <div id="progressBar" class="bg-blue-500 h-2 rounded-full" style="width: 0%;"></div>
+                </div>
+                
+                <script>
+                    const averageScore = 82.5; // Replace with dynamic value
+                    document.getElementById('progressBar').style.width = `${averageScore}%`;
+                </script>
+            </div>
         </div>
 
         <!-- Charts Section -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-            <!-- Charts will go here -->
+             <!-- Bar Chart -->
+             <div class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold text-center text-gray-800 mb-4">Grades Distribution</h2>
+                <canvas id="gradesChart"></canvas>
+            </div>
+            
+            <script>
+                const gradesChart = new Chart(document.getElementById('gradesChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['A', 'B', 'C', 'D', 'F'],
+                        datasets: [{
+                            label: 'Number of Students',
+                            data: [120, 200, 150, 80, 50],
+                            backgroundColor: 'rgba(59, 130, 246, 0.6)',
+                            borderColor: 'rgba(59, 130, 246, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
         </div>
+
+        <!--Line Chart (Student Progress Over Time)-->
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"></div>
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Student Progress Over Time</h2>
+            <canvas id="progressChart"></canvas>
+        </div>
+        
+        <script>
+            const progressChart = new Chart(document.getElementById('progressChart'), {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Average Grade',
+                        data: [65, 70, 75, 80, 85, 90],
+                        borderColor: 'rgba(16, 185, 129, 1)',
+                        borderWidth: 2,
+                        fill: false
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
 
         <!-- Table Section -->
         <div class="mt-6">
-            <!-- Table will go here -->
+             <!--Student Details Table-->
+             <div class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Student Details</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Student ID</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Course</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">John Doe</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">123456</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Introduction to Programming</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">A</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Jane Smith</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">654321</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Web Development</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">B+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </body>
