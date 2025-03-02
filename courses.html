@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses - E-Learning</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-200">
 
     <!-- Navbar -->
-    <nav class="bg-blue-600 p-4 text-white content ">
+    <nav class="bg-blue-600 p-4 text-white content shadow-md rounded-sm">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="text-lg font-bold">E-Learning</a>
             <div>
@@ -18,23 +20,42 @@
             </div>
         </div>
     </nav>
-
     <!-- Courses List -->
-    <div class="container mx-auto mt-10 p-4">
-        <h2 class="text-2xl font-bold mb-4">Available Courses</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-white p-4 rounded shadow">
-                <h3 class="text-xl font-bold">Web Development</h3>
-                <p class="text-gray-600">Learn HTML, CSS, JavaScript and more.</p>
-                <a href="course-details.html" class="text-blue-600 mt-2 inline-block">View Course</a>
-            </div>
-            <div class="bg-white p-4 rounded shadow">
-                <h3 class="text-xl font-bold">Python Programming</h3>
-                <p class="text-gray-600">Master Python for data science and web apps.</p>
-                <a href="course-details.html" class="text-blue-600 mt-2 inline-block">View Course</a>
+    <section class="mb-10 flex-grow">
+        <div class="container mx-auto mt-10 p-4">
+            <h2 class="text-2xl font-bold mb-4 text-5xl text-center">Available Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                <div class="bg-white p-4 rounded shadow hover:bg-blue-200">
+                    <h3 class="text-xl font-bold flex items-center"><span class="material-icons mr-2">code</span>Web Development</h3>
+                    <p class="text-gray-600">Learn HTML, CSS, JavaScript and more.</p>
+                    <a href="course-details.html" class="text-blue-600 mt-2 inline-block">View Course</a>
+                </div>
+                <div class="bg-white p-4 rounded shadow hover:bg-blue-200">
+                    <h3 class="text-xl font-bold flex items-center"><span class="material-icons mr-2">memory</span>Data Structures and Algorithms</h3>
+                    <p class="text-gray-600">Understand the fundamentals of data structures and algorithms.</p>
+                    <a href="course-details.html" class="text-blue-600 mt-2 inline-block">View Course</a>
+                </div>
+                <div class="bg-white p-4 rounded shadow hover:bg-blue-200">
+                    <h3 class="text-xl font-bold flex items-center"><span class="material-icons mr-2">python</span>Python Programming</h3>
+                    <p class="text-gray-600">Master Python for data science and web apps.</p>
+                    <a href="course-details.html" class="text-blue-600 mt-2 inline-block">View Course</a>
+                </div>
+                <div class="bg-white p-4 rounded shadow hover:bg-blue-200">
+                    <h3 class="text-xl font-bold flex items-center"><span class="material-icons mr-2">storage</span>Database Management</h3>
+                    <p class="text-gray-600">Learn SQL and NoSQL databases.</p>
+                    <a href="course-details.html" class="text-blue-600 mt-2 inline-block">View Course</a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-400 sm:p-4 p-4 text-white text-center mt-auto rounded-md">
+        <p>&copy; 2023 E-Learning. All rights reserved.</p>
+    </footer>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </body>
 </html>

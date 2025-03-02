@@ -88,14 +88,15 @@
         </div>
     </nav>
     <div class="flex">
-        <aside class="w-64 h-200 bg-blue-300 text-white p-4">
-            <ul>
-                <li class="border-b p-8 mb-2 hover:shadow-lg transition-shadow duration-300"><a href="#">Courses</a></li>
-                <li class="border-b p-8 mb-2 hover:shadow-lg transition-shadow duration-300"><a href="#">Results</a></li>
-                <li class="border-b p-8 mb-2 hover:shadow-lg transition-shadow duration-300"><a href="#">Resources</a></li>
+        <aside class="w-64 bg-blue-300 text-white p-4 h-screen font-black">
+            <ul class="flex flex-col justify-around">
+            <li class="border-b p-8 mb-2 hover:shadow-lg transition-shadow duration-300"><i></i><a href="#">Courses</a></li>
+            <li class="border-b p-8 mb-2 hover:shadow-lg transition-shadow duration-300"><a href="./viewresults.html">Results</a></li>
+            <li class="border-b p-8 mb-2 hover:shadow-lg transition-shadow duration-300"><a href="./resources.html">Resources</a></li>
+            <li class="border-b p-8 mb-2 hover:shadow-lg transition-shadow duration-300"><a href="#">Analytics</a></li>
             </ul>
         </aside>
-        <main class="flex-1 p-4">
+        <main class="flex-1 py-8 mx-8 bg-gray-100">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Dashboard content will go here -->
              <!--Course progress card-->
@@ -178,7 +179,7 @@
             <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Quick Actions</h2>
                 <div class="space-y-3">
-                    <a href="#" class="block text-blue-500 hover:underline">Enroll in a New Course</a>
+                    <a href="./courses.html" class="block text-blue-500 hover:underline">Enroll in a New Course</a>
                     <a href="#" class="block text-blue-500 hover:underline">View Your Profile</a>
                     <a href="#" class="block text-blue-500 hover:underline">Contact Instructor</a>
                 </div>

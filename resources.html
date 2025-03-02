@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-200font-sans leading-normal tracking-normal flex flex-col min-h-screen">
+    <nav class="bg-blue-300 p-4 shadow-md flex justify-start pl-6">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="dashboard.html" class="text-white font-bold text-2xl"><i class="fas fa-arrow-left mr-2"></i>Dashboard</a></li>
+            <!-- Add more nav items as needed -->
+        </ul>
+    </nav>
+    <header class="p-4 shadow-md">
+        <h1 class="text-3xl font-bold text-center">Course Resources</h1>
+    </header>
+    <main class="p-6 flex  p-8  items-center gap-6 justify-center">
+        <section id="course1" class= "m-6">
+            <h2 class="text-2xl font-semibold mb-4 text-center">Web Development</h2>
+            <ul class="list-disc list-inside text-center"></ul>
+                <li><a href="resource1.pdf" target="_blank" class="text-blue-700 hover:underline">Intro to web dev (PDF)</a></li>
+                <li><a href="resource2.docx" target="_blank" class="text-blue-700 hover:underline">Resource 2 (DOCX)</a></li>
+                <li><a href="resource3.mp4" target="_blank" class="text-blue-700 hover:underline">Resource 3 (Video)</a></li>
+            </ul>
+        </section>
+        <section id="course2" class="m-6">
+            <h2 class="text-2xl font-semibold mb-4 text-center">Data Structure and Algorithm</h2>
+            <ul class="list-disc list-inside text-center"></ul>
+                <li><a href="resource4.pdf" target="_blank" class="text-blue-700 hover:underline">Resource 4 (PDF)</a></li>
+                <li><a href="resource5.pptx" target="_blank" class="text-blue-700 hover:underline">Resource 5 (PPTX)</a></li>
+                <li><a href="resource6.mp3" target="_blank" class="text-blue-700 hover:underline">Resource 6 (Audio)</a></li>
+            </ul>
+        </section>
+        <!-- Add more courses as needed -->
+    </main>
+    <footer class="bg-blue-300 text-white p-4 text-center shadow-md mt-auto">
+        <p>&copy; 2023 E-Learning Platform</p>
+    </footer>
+</body>
+</html>
