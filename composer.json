@@ -1,0 +1,15 @@
+{
+    "name": "mufar/e-learning",
+    "autoload": {
+        "psr-4": {
+            "Mufar\\ELearning\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MufaroDKaseke",
+            "email": "mufarodkaseke@gmail.com"
+        }
+    ],
+    "require": {}
+}

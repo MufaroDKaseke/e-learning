@@ -26,13 +26,13 @@ class Auth {
 
     public function logout() {
         $this->session->destroy();
-        header('Location: login.php');
+        header('Location: /e-learning/login.php');
         exit();
     }
 
     public function requireAuth() {
         if (!$this->session->isLoggedIn()) {
-            header('Location: login.php');
+            header('Location: /e-learning/login.php');
             exit();
         }
     }
@@ -42,7 +42,7 @@ class Auth {
         
         $userRole = $this->session->getUserRole();
         if (!in_array($userRole, (array)$roles)) {
-            header('Location: unauthorized.php');
+            header('Location: /e-learning/unauthorized.php');
             exit();
         }
     }
